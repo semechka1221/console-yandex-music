@@ -20,6 +20,8 @@ class YandexMusicPlayer:
 
         self.duration: float = 0.0
 
+        self.is_playlist_stopping: bool = False
+
     def play_track(self, track_name: str) -> None:
 
         try:

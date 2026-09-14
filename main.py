@@ -98,6 +98,7 @@ if __name__ == "__main__":
 
             elif "stop" in command:
                 command = command.replace("stop", "")
+                player.is_playlist_stopping = True
                 restart_console(restart_mode, playlist)
                 player.stop()
 

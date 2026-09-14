@@ -12,7 +12,7 @@ def handler(player: YandexMusicPlayer, playlist: Playlists, music_end) -> None:
             if event.type == music_end:
                 if player.is_playlist:
                     restart_console("playlist", playlist)
-                    playlist.next(True)
+                    if not player.is_playlist_stopping: playlist.next(True)
 
                 else:
                     restart_console()
